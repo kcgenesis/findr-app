@@ -1,0 +1,12 @@
+#superstyle {
+    text-align: center;
+    color: white;
+    background-image: url("images/slate.jpg");
+    width: 100%;
+    height: 100%;
+}
+
+#creepy {
+    text-align:left;
+    color: red;
+}
