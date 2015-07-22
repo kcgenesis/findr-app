@@ -1,0 +1,41 @@
+USERS
+{
+	userID				
+	username
+	password
+	email
+	fname
+	lname
+	sex
+	birthday
+	created_at
+	updated_at	
+}
+
+POSTS
+{
+	postID
+	userID
+	title
+	image
+	description
+	geo-tag
+}
+
+COMMENTS
+{
+	commentID
+	postID
+	userID
+
+}
+VOTES
+{
+	voteID
+	postID
+	userID
+	positive
+}
+
+
+

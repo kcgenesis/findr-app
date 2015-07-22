@@ -1,0 +1,86 @@
+<div>
+
+	<h1>Sign In</h1>
+	<form action="/signin" method="POST">
+
+		<!--username-->
+		<label for="in_un">Username</label>
+		<input type="text" name="in[]" id="in_un">
+		<br><br>
+
+		<!--pw-->
+		<label for="in_pw">Password</label>
+		<input type="password" name="in[]" id="in_pw">
+		<br><br>
+
+		<!--submit button-->
+		<input type="submit" value="Submit">
+		<br><br>
+
+	</form>
+
+</div>
+
+<div>
+	<h1>Sign Up</h1>
+	<form action="/signin" method="POST">
+		
+		<!--username-->
+		<label for="up_un">Username</label>
+		<input type="text" name="up[]" id="up_un">
+		<br><br>
+
+		<!--email-->
+		<label for="up_email">Email</label>
+		<input type="text" name="up[]" id="up_email">
+		<br><br>
+
+		<!--first name-->
+		<label for="up_fname">Fist Name</label>
+		<input type="text" name="up[]" id="up_fname">
+		<br><br>
+
+		<!--last name-->
+		<label for="up_lname">Last Name</label>
+		<input type="text" name="up[]" id="up_lname">
+		<br><br>
+
+		<!--month-->
+		Month
+		<select name ="up[]">
+			<%for i in 1..12 do%>
+			<option><%="#{i}"%></option>
+			<%end%>
+		</select>
+		<!--day-->
+		<!--__This needs to respond to the month selected__-->
+		Day
+		<select name ="up[]">
+			<%for i in 1..31 do%>
+			<option><%="#{i}"%></option>
+			<%end%>
+		</select>
+		<!--year-->
+		Year
+		<select name ="up[]">
+			<%for i in 1900..Time.now.year do%>
+			<option><%="#{i}"%></option>
+			<%end%>
+		</select>
+		<br><br>
+
+		<!--pw-->
+		<label for="up_pw">Password</label>
+		<input type="password" name="up[]" id="up_pw">		
+		<br><br>
+
+		<!--pw2-->
+		<label for="up_pw2">Re-Enter Password</label>
+		<input type="password" name="up[]" id="up_pw2">
+		<br><br>
+
+		<!--Submit Button-->
+		<input type="submit" value="Submit">
+		<br><br>
+	</form>
+</div>

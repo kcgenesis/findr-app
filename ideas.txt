@@ -1,0 +1,54 @@
+Ideas
+
+	A "positive reinforcement" health app
+	{
+		delivers health facts...
+		people can post their fitness/dieting accomplishments
+		upvoting/downvoting
+	}
+
+	A "FINDR" crowdsourced location app
+	{
+		find anything.
+		including, but not limited to: water fountains, skate spots.
+		get upvotes/downvotes
+		link to Facebook
+		uses Google Maps API
+		someone finds somthing and you can comment on it
+		users can flag comments as inappropriate
+		subscribe to certain users to add them to your feed
+		see all of the things they've found on a map that includes the findings of everyone you've subscribed to
+		gain points as an upvoted finder
+		use hashtags
+		search for finds
+	}
+
+	A how to website
+	{
+		anyone can post up tutorials about how to do anything
+		like twitter, everything is accessible to everyone
+		hashtag functionality
+	} 
+	A to do/productivity app
+	{
+		make an account
+		save notes/lists
+		?encryption
+	}
+
+	An elementary open world 2D game "export" (maximum population 1000) where people can
+	{
+		sign in 
+		land on an island
+		explore,
+		make friends,
+		fight enemies,
+		fight one another,
+		gain experience,
+		encounter friendly animals/insects/NPC's
+		place a bounty on a player's head.
+		major user accomplishments are logged
+	}
+
+
+
