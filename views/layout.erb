@@ -4,14 +4,15 @@
         <meta charset="UTF-8">
         <title>Scooby Snax</title>
 
-        <link rel="stylesheet" type = "text/css" href = "style.css">
+        <link rel="stylesheet" type = "text/css" href = "/style.css">
 
     </head>
 
     <body id = "superstyle">
         <h1>Findr</h1>
         <h2>find anything</h2>
-        <img src = "images/scooby1.jpg" alt="a marvelous pic of scooby">
+        <img src = "/images/scooby1.jpg" alt="a marvelous pic of scooby">
+        <h4>Today's Date: <%= Time.now.strftime("%m/%d/%Y")%></h4>
         <div id = "creepy">
         <%= yield %>
         </div>

@@ -1,0 +1,23 @@
+
+<h1>#<%=@hashy.word%></h1>
+<h2>Created at<%= @hashy.created_at%></h2>
+<h2>Updated at<%= @hashy.updated_at%></h2>
+
+<% @find = PostHashy.where(hash_id: @hashy.id) %>
+
+<!--for each of these PostHashies-->
+<% @find.each do |item| %>
+	<!--match the hash_id-->
+	<% @dis = Post.where(id: item.post_id).first%>
+	<!---->
+	<figure class = ".mypic">
+	<a href=<%="/pic/"+@dis.id.to_s%>>
+		<img src= <%= "/"+@dis.image_url %>>
+	</a>
+	</figure>
+<% end %>
+
+
+
+
+</br>

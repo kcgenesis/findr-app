@@ -1,0 +1,35 @@
+<h3>You are invited to upload, <%=@user.username%></h3>
+
+<form method="POST" action="/upload" enctype="multipart/form-data">
+	<label for="plebjr">Upload Image</label>
+	<input type="file" name="myfile" id="plebjr" accept="image" capture="camera"><br>
+	<label for="blob">Caption</label>
+	<input type="text" name="mycaption" id="blob"><br>
+	<label for="blob">Enter hashtags separated by commas</label>
+	<input type="text" name="myhashes" id="blob"><br>
+	<input type="submit" value='Upload'>
+</form>
+
+<% @pics.each do |pic| %>
+	<figure class = "mypics">
+		<a href=<%="/pic/"+pic.id.to_s%>><img src= <%= pic.image_url %>></a>
+		<figcaption>
+			<%= pic.caption %><br>
+			tags:
+			<!--get all hashes that correspond to this post--> 
+			<% @find = PostHashy.where(post_id: pic.id) %>
+
+			<!--for each of these PostHashies-->
+			<% @find.each do |item| %>
+				<!--match the hash_id-->
+				<% @dis = Hashy.where(id: item.hash_id).first%>
+				<!---->
+				<a href=<%="/tag/"+item.hash_id.to_s%>>
+					<% puts "posting hashtag #{@dis.word}"%>
+					<%= @dis.word %>
+				</a>
+			<% end %>
+		</figcaption>
+
+	</figure>
+<% end %> 

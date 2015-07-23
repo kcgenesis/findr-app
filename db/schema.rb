@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721150421) do
+ActiveRecord::Schema.define(version: 20150723062028) do
+
+  create_table "hashies", force: :cascade do |t|
+    t.string   "word"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "post_hashies", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "hash_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "caption"
+    t.string   "location"
+    t.string   "image_url"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"

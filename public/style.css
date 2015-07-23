@@ -10,3 +10,18 @@
     text-align:left;
     color: red;
 }
+
+.mypics {
+
+	float:left;
+	border-style:solid;
+	border-color:white;
+	border-width:10px 10px;
+	border-width-bottom:20px;
+	background-color: white;
+}
+
+.mypics img{
+	width:300px;
+	height:auto;
+}

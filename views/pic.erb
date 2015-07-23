@@ -1,0 +1,18 @@
+
+<h1><%=@caption%></h1>
+<h2><%= @post.location %></h2>
+<h2><%= @post.created_at.year %></h2>
+<img src= <%= "/"+@post.image_url %>>
+<% @find = PostHashy.where(post_id: @post.id) %>
+
+<!--for each of these PostHashies-->
+<% @find.each do |item| %>
+	<!--match the hash_id-->
+	<% @dis = Hashy.where(id: item.hash_id).first%>
+	<!---->
+	<a href=<%="/tag/"+item.hash_id.to_s%>>
+		<%= @dis.word %>
+	</a>
+<% end %>
+
+</br>
